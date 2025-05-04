@@ -1,0 +1,64 @@
+
+.navbar-container .login-btn {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.navbar-container .login-btn:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+
+.nav-btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.nav-btn:active {
+    background-color: #00408d;
+    border-color: #00408d;
+}
+/* Transparent Navbar Over Image */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: transparent; /* Transparent Effect */
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+    margin-top: -300px;
+    
+}
+
+.nav-btn1{
+    margin-right:11px !important;
+
+}
+
+.nav-btn2{
+    margin-right: 99px !important;
+
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+.ex{
+    margin-top: 30px !important;
+    margin-right: 95px;
+    z-index: 10000 !important;
+}
+
+.doctor-section{
+    margin-top: 50px;
+}

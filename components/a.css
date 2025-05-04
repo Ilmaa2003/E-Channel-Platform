@@ -1,0 +1,81 @@
+.nav11 {
+   display: flex;
+   float: left;
+    
+}
+
+.nav-btn510 {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: 1px solid #007BFF;
+    border-radius: 25px;
+    font-size: 16px;
+    width: 167px !important;
+    cursor: pointer;
+    gap: 10px !important;
+    transition: all 0.3s ease;
+}
+
+.nav-btn510:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.nav-btn510:active {
+    background-color: #00408d;
+    border-color: #00408d;
+}
+
+.search-bar510 {
+    padding: 10px 15px;
+    border: 1px solid rgb(80, 73, 73) !important;
+    border-radius: 30px;
+    width: 400px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-size: 16px;
+    background-color: #e8dfdf3a !important;
+    margin-right: 6px;
+
+}
+
+.search-bar510:focus {
+    border-color: #007BFF !important;
+}
+
+.search-bar510::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+.nav-btns10{
+    gap: 10px !important;
+
+}
+
+.nav11 {
+    display: flex;
+    justify-content: space-between; /* Ensure space between logo and nav buttons */
+    width: 100%; /* Make sure the navbar takes full width */
+  }
+  
+  .nav-buttons10 {
+    display: flex; /* Use flexbox for easy alignment */
+    gap: 10px; /* Add space between the elements */
+    align-items: center; /* Ensure items are aligned vertically in the center */
+    justify-content: flex-end; /* Align items to the right side */
+    width: auto; /* Allow the width to shrink as needed */
+    margin-right: 20px; /* Move elements slightly to the left by adjusting the right margin */
+  }
+
+.container10{
+    padding-left: 50px;
+    padding-right:50px;
+padding-top: 20px;
+padding-bottom: 20px;
+width: 900px;
+margin-left: 300px;
+border-radius: 10px;
+
+}

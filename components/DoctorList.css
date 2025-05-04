@@ -1,0 +1,200 @@
+
+
+/* Navbar styles */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.login-form{
+    margin-right: 40px;
+
+}
+.navbar-left h1 {
+    margin: 0;
+}
+
+.navbar-right a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-right a:hover {
+    text-decoration: underline;
+}  
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden */
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s ease-in-out;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    left: 0; /* Slide in from the left */
+}
+
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    margin-left: 0px;
+}
+
+
+.text{
+text-align: center;
+color: #333;
+font-family: 'Calibri', sans-serif !important;
+font-weight: bold;
+}
+
+.sidebar ul li {
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: yellow;
+}
+
+/* Sidebar Close Button */
+.sidebar-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+
+.sidebar-toggle-btn{
+    font-size: 30px !important;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1107;
+    transition: left 0.3s ease-in-out;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.sidebar-close-btn:hover {
+    color: #dc3545;
+}
+
+
+/* Ensure button stays visible when sidebar is open */
+.sidebar.open .sidebar-toggle {
+    left: 230px; /* Adjust to keep it visible inside sidebar */
+}
+
+
+.sidebar.open + .sidebar-toggle {
+    left: 260px; /* Adjusts button position when sidebar opens */
+}
+
+/* Main Content */
+.main-content {
+    transition: margin-left 0.3s ease-in-out;
+    padding: 20px;
+    margin-left: 0; /* Default when sidebar is closed */
+    width: 100%; /* Full width */
+}
+
+.sidebar.open ~ .main-content {
+    margin-left: 250px; /* Adjusted width when sidebar is open */
+    width: calc(100% - 250px);
+}
+
+/* Doctor Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align to the left */
+    gap: 20px;
+    width: 100%; /* Ensures it adapts */
+    transition: width 0.3s ease-in-out;
+}
+
+.sidebar.open ~ .main-content .card-container {
+    width: 100%; /* Ensure it does not shrink */
+}
+
+/* Updated card styles for flexibility */
+.card {
+    flex: 1 1 calc(33.33% - 20px); /* Each card takes up a third of the width */
+    height: 120px; /* Reduced card height */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    transition: flex 0.3s ease-in-out;
+}
+
+.sidebar.open ~ .main-content .card {
+    flex: 1 1 calc(33.33% - 20px); /* Maintain three cards per row */
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Two cards per row on medium screens */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%; /* One card per row on small screens */
+        max-width: 100%;
+    }
+
+    .main-content {
+        margin-left: 0; /* No shifting on small screens */
+        width: 100%;
+    }
+}
+
+.errormsg{
+    color: red;
+    margin-top: 10px;
+    margin-left: 0px;
+    font-size: 16px;
+}
